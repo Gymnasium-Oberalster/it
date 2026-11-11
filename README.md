@@ -1,6 +1,7 @@
 # IT-Portal Gymnasium Oberalster
 
-Mobil optimiertes Hilfe-Portal zur IT am GOA, gehostet über GitHub Pages.
+Portal für Ressourcen zur Nutzung der IT am Gymnasium Oberalster –
+mobil optimiert, gehostet über GitHub Pages.
 QR-Codes an Geräten (z. B. iPad-Koffern) verlinken direkt auf die passende Seite,
 z. B. `ipads/koffer1.html`.
 
