@@ -1,0 +1,5 @@
+# Quelldateien der Anleitungen (nicht veröffentlichen)
+*.pdf
+# lokale Tools / System
+.claude/
+.DS_Store
