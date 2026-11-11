@@ -69,6 +69,23 @@
       );
     },
 
+    /* Lehrer-iPad mit Funkwellen zu Schüler-iPad – iPads fernsteuern */
+    remote: function () {
+      return svg(
+        '<rect x="14" y="26" width="54" height="74" rx="9" fill="' + INK + '"/>' +
+        '<rect x="19" y="32" width="44" height="62" rx="4" fill="#3b82f6"/>' +
+        '<rect x="26" y="42" width="30" height="5" rx="2.5" fill="#fff" opacity=".9"/>' +
+        '<rect x="26" y="53" width="13" height="13" rx="3" fill="#fff"/>' +
+        '<rect x="43" y="53" width="13" height="13" rx="3" fill="#fff"/>' +
+        '<rect x="26" y="70" width="13" height="13" rx="3" fill="#fff"/>' +
+        '<rect x="43" y="70" width="13" height="13" rx="3" fill="#facc15"/>' +
+        '<path d="M74 31a11 11 0 0 1 0 18M82 24a21 21 0 0 1 0 32" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round"/>' +
+        '<rect x="78" y="58" width="30" height="42" rx="6" fill="' + INK + '"/>' +
+        '<rect x="82" y="63" width="22" height="32" rx="2.5" fill="#a5b4fc"/>' +
+        '<rect x="86" y="70" width="14" height="14" rx="3" fill="#facc15"/>'
+      );
+    },
+
     /* Akku mit Blitz – Richtig laden */
     charge: function () {
       return svg(

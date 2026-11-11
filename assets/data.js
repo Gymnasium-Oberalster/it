@@ -40,6 +40,13 @@ window.PORTAL = {
       disabled: true,
       badge: "Bald"
     },
+    "fernsteuern": {
+      title: "iPads fernsteuern",
+      icon: "remote",
+      tone: "blue",
+      disabled: true,
+      badge: "Bald"
+    },
     "stoerung": {
       title: "Störungsmeldung",
       icon: "report",
@@ -65,7 +72,7 @@ window.PORTAL = {
     "start": {
       sections: [
         { title: "Geräte", tiles: ["koffer-1"] },
-        { title: "Hilfe & Service", tiles: ["self-help", "stoerung"] },
+        { title: "Hilfe & Service", tiles: ["self-help", "stoerung", "fernsteuern"] },
         { title: "Anleitungen", tiles: ["anleitung-anmelden", "anleitung-laden"] }
       ]
     },
@@ -77,6 +84,7 @@ window.PORTAL = {
             "buchen-koffer-1",
             "self-help",
             "stoerung",
+            "fernsteuern",
             "anleitung-anmelden",
             "anleitung-laden"
           ]
