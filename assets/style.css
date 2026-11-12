@@ -351,8 +351,9 @@ a.tile:focus-visible {
 .step-media { background: #e7e3dc; }
 .step-media a { display: block; }
 .step-media img { width: 100%; }
-.step-media.illu { background: var(--tone-slate); padding: 8px 0 0; }
-.step-media.illu img { max-height: 62vh; width: auto; margin: 0 auto; }
+.step-media.illu { background: var(--tone-slate); padding: 10px 8px 4px; }
+.step-media.illu svg { display: block; width: 100%; height: auto; max-height: 72vh; margin: 0 auto; }
+.chips:empty { display: none; }
 
 .step-body {
   display: flex;

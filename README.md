@@ -17,7 +17,9 @@ z. B. `ipads/koffer1.html`.
 
 ## Neuen Koffer anlegen
 
-1. In `assets/data.js` eine Seite (z. B. `"ipad-koffer-2"`) und ggf. eine Buchen-Ressource ergänzen.
+1. In `assets/data.js` unter `koffer` Farbe und erstes iPad eintragen (wie im toolhub-Tool
+   „Sperrbildschirme für iPads erstellen“), dann eine Seite (z. B. `"ipad-koffer-2"` mit
+   `koffer: "2"`) und ggf. eine Buchen-Ressource ergänzen.
 2. `ipads/koffer1.html` kopieren → `ipads/koffer2.html`, darin `data-page` und Titel anpassen.
 
 ## Lokal testen

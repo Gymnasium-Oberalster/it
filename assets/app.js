@@ -13,6 +13,11 @@
   var mount = document.getElementById("content");
   if (!page || !mount) return;
 
+  // zuletzt besuchten Koffer merken – Anleitungen ohne ?koffer= greifen darauf zurück
+  if (page.koffer) {
+    try { localStorage.setItem("goa-koffer", page.koffer); } catch (e) {}
+  }
+
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -50,7 +55,9 @@
       );
     }
 
-    var attrs = ' href="' + esc(resolve(r.href)) + '"';
+    var href = resolve(r.href);
+    if (r.perKoffer && page.koffer) href += "?koffer=" + encodeURIComponent(page.koffer);
+    var attrs = ' href="' + esc(href) + '"';
     var ext = "";
     if (r.external) {
       attrs += ' target="_blank" rel="noopener"';

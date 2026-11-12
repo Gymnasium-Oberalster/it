@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body data-root="../">
   <header class="topbar">
     <div class="wrap">
       <a class="back" href="../" onclick="if (history.length > 1 && document.referrer) { history.back(); return false; }">
@@ -27,6 +27,7 @@
       <p class="kicker">Anleitung · iPad</p>
       <h1>An- und Abmelden</h1>
       <p class="lead">Die Schul-iPads werden im Gast-Modus genutzt. So geht’s:</p>
+      <div class="chips" id="koffer-chip"></div>
       <nav class="toc" aria-label="Abschnitte">
         <a href="#anmelden">Anmelden</a>
         <a href="#abmelden">Abmelden</a>
@@ -37,8 +38,7 @@
       <h2>Anmelden</h2>
       <ol class="steps two-col">
         <li class="step">
-          <div class="step-media illu">
-            <img src="../assets/img/anleitungen/anmelden-1.svg" width="460" height="700" alt="Sperrbildschirm des iPads, unten rechts ist die Schaltfläche „Gast“ markiert">
+          <div class="step-media illu" data-ipad-screen="gast" role="img" aria-label="Sperrbildschirm des iPads, unten rechts ist die Schaltfläche „Gast“ markiert">
           </div>
           <div class="step-body">
             <span class="step-num">1</span>
@@ -46,8 +46,7 @@
           </div>
         </li>
         <li class="step">
-          <div class="step-media illu">
-            <img src="../assets/img/anleitungen/anmelden-2.svg" width="460" height="700" alt="Bildschirm „Hallo“, der Home-Button unter dem Bildschirm ist markiert" loading="lazy">
+          <div class="step-media illu" data-ipad-screen="hallo" role="img" aria-label="Bildschirm „Hallo“, der Home-Button unter dem Bildschirm ist markiert">
           </div>
           <div class="step-body">
             <span class="step-num">2</span>
@@ -69,8 +68,7 @@
       <h2>Abmelden</h2>
       <ol class="steps">
         <li class="step">
-          <div class="step-media illu">
-            <img src="../assets/img/anleitungen/abmelden.svg" width="460" height="700" alt="Sperrbildschirm im Gast-Modus: Taste oben am iPad (a, b) und „Abmelden“ unten rechts (c) sind markiert" loading="lazy">
+          <div class="step-media illu" data-ipad-screen="abmelden" role="img" aria-label="Sperrbildschirm im Gast-Modus: Taste oben am iPad (a, b) und „Abmelden“ unten rechts (c) sind markiert">
           </div>
           <div class="step-body">
             <span class="step-num">3</span>
@@ -94,5 +92,7 @@
   <footer class="footer">
     <div class="wrap">IT-Admin-Team · Gymnasium Oberalster · <a href="../">Zur Startseite</a></div>
   </footer>
+  <script src="../assets/data.js"></script>
+  <script src="../assets/ipad-screens.js"></script>
 </body>
 </html>

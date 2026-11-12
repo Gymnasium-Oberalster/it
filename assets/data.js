@@ -18,11 +18,19 @@
  *   badge     kleiner Hinweis oben rechts auf der Kachel
  */
 window.PORTAL = {
+  /*
+   * iPad-Koffer. Farbe und Beispiel-iPad bestimmen den Sperrbildschirm in den
+   * Anleitungen (wie im toolhub-Tool „Sperrbildschirme für iPads erstellen“).
+   */
+  koffer: {
+    "1": { name: "Koffer 1", farbe: "#c70000", farbname: "Rot", ipad: "101" }
+  },
+
   resources: {
     "koffer-1": {
       title: "iPad-Koffer 1",
       icon: "case",
-      iconOptions: { color: "#ef4444", label: "1" },
+      iconOptions: { color: "#c70000", label: "1" },
       tone: "slate",
       href: "ipads/koffer1.html"
     },
@@ -58,7 +66,8 @@ window.PORTAL = {
       title: "An- und Abmelden",
       icon: "login",
       tone: "purple",
-      href: "anleitungen/an-und-abmelden.html"
+      href: "anleitungen/an-und-abmelden.html",
+      perKoffer: true   // bekommt auf Koffer-Seiten ?koffer=… angehängt
     },
     "anleitung-laden": {
       title: "Richtig laden",
@@ -78,6 +87,7 @@ window.PORTAL = {
     },
 
     "ipad-koffer-1": {
+      koffer: "1",
       sections: [
         {
           tiles: [
