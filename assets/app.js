@@ -56,7 +56,8 @@
     }
 
     var href = resolve(r.href);
-    if (r.perKoffer && page.koffer) href += "?koffer=" + encodeURIComponent(page.koffer);
+    var kofferId = page.koffer || window.GOA_KOFFER_ID;
+    if (r.perKoffer && kofferId) href += "?koffer=" + encodeURIComponent(kofferId);
     var attrs = ' href="' + esc(href) + '"';
     var ext = "";
     if (r.external) {

@@ -23,7 +23,7 @@ window.PORTAL = {
    * Anleitungen (wie im toolhub-Tool „Sperrbildschirme für iPads erstellen“).
    */
   koffer: {
-    "1": { name: "Koffer 1", farbe: "#c70000", farbname: "Rot", ipad: "101", seite: "ipads/koffer1.html" }
+    "1": { name: "Koffer 1", farbe: "#c70000", farbname: "Rot", ipad: "101", tag: "iPad-Koffer 1", seite: "ipads/koffer1.html" }
   },
 
   resources: {
@@ -52,8 +52,22 @@ window.PORTAL = {
       title: "iPads fernsteuern",
       icon: "remote",
       tone: "blue",
-      disabled: true,
-      badge: "Bald"
+      href: "ipads/steuern.html",
+      perKoffer: true
+    },
+    "mdm-iserv": {
+      title: "Mobilgerätesteuerung",
+      icon: "remote",
+      tone: "blue",
+      href: "https://open.iserv.app/#goa-hh.de/iserv/mdm/hosts/mdm/device",
+      external: true
+    },
+    "anleitung-steuern": {
+      title: "Anleitung",
+      icon: "steps",
+      tone: "purple",
+      href: "anleitungen/ipads-steuern.html",
+      perKoffer: true
     },
     "stoerung": {
       title: "Störungsmeldung",
@@ -84,6 +98,12 @@ window.PORTAL = {
         { title: "Geräte", tiles: ["koffer-1"] },
         { title: "Hilfe & Service", tiles: ["self-help", "stoerung", "fernsteuern"] },
         { title: "Anleitungen", tiles: ["anleitung-anmelden", "anleitung-laden"] }
+      ]
+    },
+
+    "ipads-steuern": {
+      sections: [
+        { tiles: ["mdm-iserv", "anleitung-steuern"] }
       ]
     },
 

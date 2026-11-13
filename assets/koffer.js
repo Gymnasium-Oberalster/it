@@ -9,6 +9,7 @@
  *   #koffer-chip            Hinweis „● Koffer 1“ im Seitenkopf
  *   [data-koffer-farbname]  Farbname des Koffers in Kleinbuchstaben („rot“)
  *   [data-koffer-nur]       wird nur angezeigt, wenn ein Koffer bekannt ist
+ *   [data-koffer-tag]       IServ-Tag des Koffers in Anführungszeichen („iPad-Koffer 1“)
  */
 (function () {
   var alleKoffer = (window.PORTAL || {}).koffer || {};
@@ -21,6 +22,7 @@
   }
   var koffer = (id && alleKoffer[id]) || null;
   window.GOA_KOFFER = koffer;
+  window.GOA_KOFFER_ID = koffer ? id : null;
   if (!koffer) return;
 
   var chip = document.getElementById("koffer-chip");
@@ -31,6 +33,8 @@
   }
   var namen = document.querySelectorAll("[data-koffer-farbname]");
   for (var i = 0; i < namen.length; i++) namen[i].textContent = (koffer.farbname || "").toLowerCase();
+  var tags = document.querySelectorAll("[data-koffer-tag]");
+  for (var t = 0; t < tags.length; t++) if (koffer.tag) tags[t].textContent = "„" + koffer.tag + "“";
   var nur = document.querySelectorAll("[data-koffer-nur]");
   for (var k = 0; k < nur.length; k++) nur[k].hidden = false;
 })();

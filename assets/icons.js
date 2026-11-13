@@ -86,6 +86,15 @@
       );
     },
 
+    /* Blatt mit nummerierten Schritten – Anleitung */
+    steps: function () {
+      return svg(
+        '<rect x="24" y="14" width="72" height="92" rx="10" fill="#fff" ' + S + "/>" +
+        '<circle cx="42" cy="38" r="8" fill="#22c55e"/><circle cx="42" cy="60" r="8" fill="#3b82f6"/><circle cx="42" cy="82" r="8" fill="#f59e0b"/>' +
+        '<path d="M56 38h26M56 60h26M56 82h18" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>'
+      );
+    },
+
     /* Akku mit Blitz – Richtig laden */
     charge: function () {
       return svg(
