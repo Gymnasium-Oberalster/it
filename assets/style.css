@@ -663,14 +663,14 @@ a.tile:focus-visible {
   .slide-text { padding: 10px 14px 12px; }
 }
 
-/* Foto-/Grafikschritte im Querformat: Bild mittig, ganz sichtbar */
-.slide-media.photo { display: grid; place-items: center; padding: 10px; }
-.slide-media.photo a { display: contents; }
-.slide-media.photo img {
+/* Grafikschritte: Bild füllt die Fläche randlos. Die SVGs legen per viewBox den Ausschnitt
+   fest, der immer ganz sichtbar bleibt; der Rest der Fläche zeigt die Umgebung der Zeichnung. */
+.slide-media.photo a { position: absolute; inset: 0; display: block; }
+.slide-media.photo img,
+.slide-media.photo svg {
   position: absolute;
-  inset: 10px;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  object-fit: contain;
-  border-radius: 14px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
 }
