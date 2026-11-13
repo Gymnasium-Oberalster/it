@@ -23,7 +23,7 @@ window.PORTAL = {
    * Anleitungen (wie im toolhub-Tool „Sperrbildschirme für iPads erstellen“).
    */
   koffer: {
-    "1": { name: "Koffer 1", farbe: "#c70000", farbname: "Rot", ipad: "101" }
+    "1": { name: "Koffer 1", farbe: "#c70000", farbname: "Rot", ipad: "101", seite: "ipads/koffer1.html" }
   },
 
   resources: {

@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body data-root="../">
+<body class="pager-page" data-root="../">
   <header class="topbar">
     <div class="wrap">
       <a class="back" href="../" onclick="if (history.length > 1 && document.referrer) { history.back(); return false; }">
@@ -22,77 +22,108 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="hero">
-      <p class="kicker">Anleitung · iPad</p>
-      <h1>An- und Abmelden</h1>
-      <p class="lead">Die Schul-iPads werden im Gast-Modus genutzt. So geht’s:</p>
+  <main class="pager">
+    <div class="pager-head wrap">
+      <div>
+        <p class="kicker">Anleitung · iPad</p>
+        <h1>An- und Abmelden</h1>
+      </div>
       <div class="chips" id="koffer-chip"></div>
-      <nav class="toc" aria-label="Abschnitte">
-        <a href="#anmelden">Anmelden</a>
-        <a href="#abmelden">Abmelden</a>
-      </nav>
     </div>
 
-    <section class="guide-part" id="anmelden">
-      <h2>Anmelden</h2>
-      <ol class="steps two-col">
-        <li class="step">
-          <div class="step-media illu" data-ipad-screen="gast" role="img" aria-label="Sperrbildschirm des iPads, unten rechts ist die Schaltfläche „Gast“ markiert">
+    <div class="slides" id="slides" tabindex="0" aria-label="Schritte der Anleitung">
+
+      <section class="slide" id="schritt-1" aria-label="Schritt 1 von 4">
+        <div class="slide-card">
+          <div class="slide-media">
+            <div class="illu" data-ipad-screen="gast" role="img" aria-label="Sperrbildschirm des iPads, unten rechts ist die Schaltfläche „Gast“ markiert"></div>
           </div>
-          <div class="step-body">
+          <div class="slide-text">
             <span class="step-num">1</span>
-            <div class="step-text"><p>Auf dem Sperrbildschirm <strong>unten rechts auf „Gast“</strong> tippen.</p></div>
+            <div class="step-text">
+              <p class="phase">Anmelden</p>
+              <p>Auf dem Sperrbildschirm <strong>unten rechts auf „Gast“</strong> tippen.</p>
+            </div>
           </div>
-        </li>
-        <li class="step">
-          <div class="step-media illu" data-ipad-screen="hallo" role="img" aria-label="Bildschirm „Hallo“, der Home-Button unter dem Bildschirm ist markiert">
+        </div>
+      </section>
+
+      <section class="slide" id="schritt-2" aria-label="Schritt 2 von 4">
+        <div class="slide-card">
+          <div class="slide-media">
+            <div class="illu" data-ipad-screen="hallo" role="img" aria-label="Bildschirm „Hallo“, der Home-Button unter dem Bildschirm ist markiert"></div>
           </div>
-          <div class="step-body">
+          <div class="slide-text">
             <span class="step-num">2</span>
-            <div class="step-text"><p>Den <strong>Home-Button</strong> drücken, um zu bestätigen.</p></div>
+            <div class="step-text">
+              <p class="phase">Anmelden</p>
+              <p>Den <strong>Home-Button</strong> drücken, um zu bestätigen.</p>
+            </div>
           </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </section>
 
-    <div class="callout ok">
-      <p><strong>Fertig!</strong>Das iPad kann nun genutzt werden.</p>
-    </div>
-
-    <div class="callout stop">
-      <p><strong>Nach der Nutzung müssen sich alle Schüler:innen abmelden!</strong>Bitte fordere sie dazu auf. Die Abmeldung von IServ und anderen Apps erfolgt durch die Abmeldung vom Gerät automatisch.</p>
-    </div>
-
-    <section class="guide-part" id="abmelden">
-      <h2>Abmelden</h2>
-      <ol class="steps">
-        <li class="step">
-          <div class="step-media illu" data-ipad-screen="abmelden" role="img" aria-label="Sperrbildschirm im Gast-Modus: Taste oben am iPad (a, b) und „Abmelden“ unten rechts (c) sind markiert">
+      <section class="slide" id="schritt-3" aria-label="Schritt 3 von 4" data-next-label="Abmelden">
+        <div class="slide-card">
+          <div class="slide-media">
+            <div class="illu" data-ipad-screen="bereit" role="img" aria-label="Startbildschirm des iPads mit Apps – das iPad ist einsatzbereit"></div>
+            <div class="media-notes">
+              <div class="callout stop">
+                <p><strong>Nach der Nutzung müssen sich alle Schüler:innen abmelden!</strong>Bitte fordere sie dazu auf. IServ und andere Apps werden dabei automatisch mit abgemeldet.</p>
+              </div>
+            </div>
           </div>
-          <div class="step-body">
+          <div class="slide-text">
             <span class="step-num">3</span>
             <div class="step-text">
+              <p class="phase">Fertig</p>
+              <p>Das iPad ist <strong>einsatzbereit</strong> und kann genutzt werden.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="schritt-4" aria-label="Schritt 4 von 4">
+        <div class="slide-card">
+          <div class="slide-media">
+            <div class="illu" data-ipad-screen="abmelden" role="img" aria-label="Sperrbildschirm im Gast-Modus: Taste oben am iPad (a, b) und „Abmelden“ unten rechts (c) sind markiert"></div>
+            <div class="media-notes mid">
+              <div class="callout warn">
+                <p><strong>Beim Abmelden werden alle Daten gelöscht.</strong>Unterrichtsergebnisse vorher über IServ o. Ä. sichern.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-text">
+            <span class="step-num">4</span>
+            <div class="step-text">
+              <p class="phase">Abmelden</p>
               <ol class="sub-steps">
-                <li><span class="letter">a</span><span><strong>iPad sperren:</strong> Taste oben am Gehäuse drücken.</span></li>
-                <li><span class="letter">b</span><span><strong>iPad wieder aufwecken:</strong> erneut die Taste oben drücken. Es erscheint der Sperrbildschirm.</span></li>
+                <li><span class="letter">a</span><span><strong>Taste oben</strong> drücken – das iPad wird gesperrt.</span></li>
+                <li><span class="letter">b</span><span><strong>Taste oben</strong> erneut drücken – der Sperrbildschirm erscheint.</span></li>
                 <li><span class="letter">c</span><span><strong>Unten rechts auf „Abmelden“</strong> tippen.</span></li>
               </ol>
             </div>
           </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </section>
 
-    <div class="callout warn">
-      <p><strong>Hinweis</strong>Nach dem Abmelden werden alle Daten vom iPad gelöscht. Unterrichtsergebnisse also vorher über IServ o. Ä. sichern.</p>
     </div>
+
+    <nav class="pager-nav wrap" aria-label="Blättern">
+      <button type="button" class="pager-btn" id="pager-prev">
+        <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M10 2L2 10l8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Zurück
+      </button>
+      <div class="pager-dots" id="pager-dots"></div>
+      <a class="pager-btn primary" id="pager-next" href="#schritt-2">
+        <span>Weiter</span>
+        <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M2 2l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">IT-Admin-Team · Gymnasium Oberalster · <a href="../">Zur Startseite</a></div>
-  </footer>
   <script src="../assets/data.js"></script>
   <script src="../assets/ipad-screens.js"></script>
+  <script src="../assets/pager.js"></script>
 </body>
 </html>
