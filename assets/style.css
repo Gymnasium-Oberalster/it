@@ -138,7 +138,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------- Seitenkopf ---------- */
 
-.hero { padding: 12px 0 20px; }
+.hero { padding: max(24px, calc(env(safe-area-inset-top) + 12px)) 0 20px; }
 
 .kicker {
   margin: 0 0 2px;
@@ -485,6 +485,7 @@ a.tile:focus-visible {
 
 .pager-head {
   flex: none;
+  margin-top: max(14px, env(safe-area-inset-top));
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -660,4 +661,16 @@ a.tile:focus-visible {
   .pager-head .kicker { display: none; }
   .pager-head h1 { font-size: 22px; }
   .slide-text { padding: 10px 14px 12px; }
+}
+
+/* Foto-/Grafikschritte im Querformat: Bild mittig, ganz sichtbar */
+.slide-media.photo { display: grid; place-items: center; padding: 10px; }
+.slide-media.photo a { display: contents; }
+.slide-media.photo img {
+  position: absolute;
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: contain;
+  border-radius: 14px;
 }

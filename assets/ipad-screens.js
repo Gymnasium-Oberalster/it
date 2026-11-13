@@ -7,35 +7,14 @@
  * dem Benutzerkreis, darunter das Schullogo. Hochkant zeigt iOS davon nur den mittleren
  * Ausschnitt kurz²/lang = 1215 px Breite (x 472,5 … 1687,5).
  *
- * Welcher Koffer: ?koffer=… in der Adresse, sonst der zuletzt besuchte Koffer
- * (localStorage), sonst ein neutrales Grau ohne Nummer.
+ * Welcher Koffer: siehe assets/koffer.js (muss vorher geladen sein).
  *
  * Platzhalter im HTML: <div data-ipad-screen="gast|hallo|abmelden"></div>
  */
 (function () {
   var root = document.body.getAttribute("data-root") || "";
-  var data = window.PORTAL || {};
-  var alleKoffer = data.koffer || {};
-
-  // ---------- Koffer bestimmen ----------
-  var id = null;
-  try { id = new URLSearchParams(location.search).get("koffer"); } catch (e) {}
-  if (id && alleKoffer[id]) {
-    try { localStorage.setItem("goa-koffer", id); } catch (e) {}
-  } else {
-    try { id = localStorage.getItem("goa-koffer"); } catch (e) { id = null; }
-  }
-  var koffer = (id && alleKoffer[id]) || null;
+  var koffer = window.GOA_KOFFER || null;
   var farbe = koffer ? koffer.farbe : "#5b6472";
-  window.GOA_KOFFER = koffer;
-
-  // ---------- Hinweis-Chip im Seitenkopf ----------
-  var chip = document.getElementById("koffer-chip");
-  if (chip && koffer) {
-    chip.innerHTML =
-      '<span class="chip"><span class="dot" style="background:' + farbe + '"></span>' +
-      koffer.name + "</span>";
-  }
 
   // ---------- Geometrie ----------
   var INK = "#1d2433";
@@ -90,7 +69,7 @@
     var oben = grund - versal;
     return (
       '<text x="36" y="' + grund + '" font-size="34" font-weight="600" fill="#fff">' + links + "</text>" +
-      wlan(1018, grund, versal) +
+      wlan(1004, grund, versal) +
       '<text x="1116" y="' + grund + '" font-size="32" font-weight="600" fill="#fff" text-anchor="end">94 %</text>' +
       // Akku: so hoch wie die Versalien
       '<rect x="1128.5" y="' + (oben + 1) + '" width="50" height="' + (versal - 2) + '" rx="6.5" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>' +

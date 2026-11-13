@@ -11,72 +11,100 @@
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="wrap">
-      <a class="back" href="../" onclick="if (history.length > 1 && document.referrer) { history.back(); return false; }">
-        <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M10 2L2 10l8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Zurück
-      </a>
-      <a class="brand" href="../"><span class="brand-mark">GOA</span></a>
-    </div>
-  </header>
+<body class="pager-page" data-root="../">
 
-  <main class="wrap">
-    <div class="hero">
-      <p class="kicker">Anleitung · iPad-Koffer</p>
-      <h1>Richtig laden</h1>
-      <p class="lead">Damit die iPads beim nächsten Mal voll geladen sind.</p>
+  <main class="pager">
+    <div class="pager-head wrap">
+      <div>
+        <p class="kicker">Anleitung · iPad-Koffer</p>
+        <h1>Richtig laden</h1>
+      </div>
+      <div class="chips" id="koffer-chip"></div>
     </div>
 
-    <ol class="steps two-col">
-      <li class="step">
-        <div class="step-media">
-          <a href="../assets/img/anleitungen/laden-1.jpg"><img src="../assets/img/anleitungen/laden-1.jpg" width="1000" height="517" alt="Rotes iPad gehört in den Koffer mit der roten Ziffer, grünes in den mit der grünen" loading="lazy"></a>
-        </div>
-        <div class="step-body">
-          <span class="step-num">1</span>
-          <div class="step-text"><p>Alle iPads in den Koffer mit der <strong>richtigen Farbe</strong> einsortieren.</p></div>
-        </div>
-      </li>
-      <li class="step">
-        <div class="step-media">
-          <a href="../assets/img/anleitungen/laden-2.jpg"><img src="../assets/img/anleitungen/laden-2.jpg" width="1000" height="516" alt="iPads im Koffer, jedes mit eingestecktem Ladekabel" loading="lazy"></a>
-        </div>
-        <div class="step-body">
-          <span class="step-num">2</span>
-          <div class="step-text"><p><strong>Alle</strong> iPads am Ladekabel anschließen.</p></div>
-        </div>
-      </li>
-      <li class="step">
-        <div class="step-media">
-          <a href="../assets/img/anleitungen/laden-3.jpg"><img src="../assets/img/anleitungen/laden-3.jpg" width="1000" height="518" alt="Stromkabel wird an der Rückseite des Koffers eingesteckt" loading="lazy"></a>
-        </div>
-        <div class="step-body">
-          <span class="step-num">3</span>
-          <div class="step-text"><p>Ladekabel an der <strong>Rückseite</strong> des Koffers einstecken.</p></div>
-        </div>
-      </li>
-      <li class="step">
-        <div class="step-media">
-          <a href="../assets/img/anleitungen/laden-4.jpg"><img src="../assets/img/anleitungen/laden-4.jpg" width="1000" height="516" alt="Zeitschaltuhr mit Tasten Reset (+) und Start/Stop (–); Kippschalter Aux2 steht auf O" loading="lazy"></a>
-        </div>
-        <div class="step-body">
-          <span class="step-num">4</span>
-          <div class="step-text">
-            <ol class="sub-steps">
-              <li><span class="letter">a</span><span><strong>Reset (+)</strong> drücken – Zeitschaltuhr zurücksetzen</span></li>
-              <li><span class="letter">b</span><span><strong>Start/Stop (–)</strong> drücken – Ladevorgang starten</span></li>
-            </ol>
-            <p class="sub">Den Kippschalter (Aux2) auf <strong>O</strong> stehen lassen.</p>
+    <div class="slides" id="slides" tabindex="0" aria-label="Schritte der Anleitung">
+
+      <section class="slide" id="schritt-1" aria-label="Schritt 1 von 4">
+        <div class="slide-card">
+          <div class="slide-media photo">
+            <a href="../assets/img/anleitungen/laden-1.jpg"><img src="../assets/img/anleitungen/laden-1.jpg" width="1000" height="517" alt="Rotes iPad gehört in den Koffer mit der roten Ziffer, grünes in den mit der grünen"></a>
+          </div>
+          <div class="slide-text">
+            <span class="step-num">1</span>
+            <div class="step-text">
+              <p class="phase">Einräumen</p>
+              <p>Alle iPads in den Koffer mit der <strong>richtigen Farbe</strong> einsortieren.<span data-koffer-nur hidden> Dieser Koffer ist <strong data-koffer-farbname></strong>.</span></p>
+            </div>
           </div>
         </div>
-      </li>
-    </ol>
+      </section>
+
+      <section class="slide" id="schritt-2" aria-label="Schritt 2 von 4">
+        <div class="slide-card">
+          <div class="slide-media photo">
+            <a href="../assets/img/anleitungen/laden-2.jpg"><img src="../assets/img/anleitungen/laden-2.jpg" width="1000" height="516" alt="iPads im Koffer, jedes mit eingestecktem Ladekabel" loading="lazy"></a>
+          </div>
+          <div class="slide-text">
+            <span class="step-num">2</span>
+            <div class="step-text">
+              <p class="phase">Anschließen</p>
+              <p><strong>Alle</strong> iPads am Ladekabel anschließen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="schritt-3" aria-label="Schritt 3 von 4">
+        <div class="slide-card">
+          <div class="slide-media photo">
+            <a href="../assets/img/anleitungen/laden-3.jpg"><img src="../assets/img/anleitungen/laden-3.jpg" width="1000" height="518" alt="Stromkabel wird an der Rückseite des Koffers eingesteckt" loading="lazy"></a>
+          </div>
+          <div class="slide-text">
+            <span class="step-num">3</span>
+            <div class="step-text">
+              <p class="phase">Strom</p>
+              <p>Ladekabel an der <strong>Rückseite</strong> des Koffers einstecken.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="schritt-4" aria-label="Schritt 4 von 4">
+        <div class="slide-card">
+          <div class="slide-media photo">
+            <a href="../assets/img/anleitungen/laden-4.jpg"><img src="../assets/img/anleitungen/laden-4.jpg" width="1000" height="516" alt="Zeitschaltuhr mit Tasten Reset (+) und Start/Stop (–); Kippschalter Aux2 steht auf O" loading="lazy"></a>
+          </div>
+          <div class="slide-text">
+            <span class="step-num">4</span>
+            <div class="step-text">
+              <p class="phase">Laden starten</p>
+              <ol class="sub-steps">
+                <li><span class="letter">a</span><span><strong>Reset (+)</strong> drücken – Zeitschaltuhr zurücksetzen.</span></li>
+                <li><span class="letter">b</span><span><strong>Start/Stop (–)</strong> drücken – Ladevorgang starten.</span></li>
+              </ol>
+              <p class="sub">Den Kippschalter (Aux2) auf <strong>O</strong> stehen lassen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <nav class="pager-nav wrap" aria-label="Blättern">
+      <button type="button" class="pager-btn" id="pager-prev">
+        <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M10 2L2 10l8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Zurück
+      </button>
+      <div class="pager-dots" id="pager-dots"></div>
+      <a class="pager-btn primary" id="pager-next" href="#schritt-2">
+        <span>Weiter</span>
+        <svg viewBox="0 0 12 20" aria-hidden="true"><path d="M2 2l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">IT-Admin-Team · Gymnasium Oberalster · <a href="../">Zur Startseite</a></div>
-  </footer>
+  <script src="../assets/data.js"></script>
+  <script src="../assets/koffer.js"></script>
+  <script src="../assets/pager.js"></script>
 </body>
 </html>

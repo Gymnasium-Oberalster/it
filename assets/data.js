@@ -73,7 +73,8 @@ window.PORTAL = {
       title: "Richtig laden",
       icon: "charge",
       tone: "green",
-      href: "anleitungen/laden.html"
+      href: "anleitungen/laden.html",
+      perKoffer: true
     }
   },
 
